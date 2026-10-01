@@ -328,8 +328,6 @@ textarea {
 .lacort-page {
   box-sizing: border-box;
   max-width: 70ch;
-  margin-inline: auto;
-  padding-inline: 1rem;
 }
 
 .lacort-site {
@@ -348,6 +346,21 @@ textarea {
   max-width: 75rem;
   margin-inline: auto;
   padding: 0.75rem 1rem;
+}
+
+.lacort-header__tools {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.lacort-square {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
 }
 
 .lacort-wide {
@@ -486,7 +499,7 @@ textarea {
 }
 
 .lacort-titleband > .lacort-wide {
-  padding-block: 1.5rem;
+  padding-block: 2rem;
 }
 
 .lacort-titleband h1 {
@@ -508,6 +521,41 @@ textarea {
 .lacort-footer__title {
   margin: 0 0 1rem;
   font-size: var(--ui-size-lead);
+}
+
+.lacort-footer__col {
+  padding-left: 1rem;
+  border-left: 2px solid var(--lacort-oxford-blue-mid);
+}
+
+.lacort-footer__col p {
+  line-height: 1.9;
+}
+
+.lacort-footer__legal {
+  background-color: var(--lacort-gray-light);
+  color: var(--lacort-text);
+}
+
+.lacort-footer__legal > .lacort-wide {
+  padding-block: 1rem;
+}
+
+.lacort-footer__legal p {
+  margin: 0;
+}
+
+.lacort-notice {
+  background-color: var(--lacort-amber-15);
+  color: var(--lacort-text);
+}
+
+.lacort-notice > .lacort-wide {
+  padding-block: 0.75rem;
+}
+
+.lacort-notice p {
+  margin: 0;
 }
 
 .lacort-footer__col > :first-child {
@@ -896,6 +944,22 @@ textarea {
   border-color: var(--lacort-oxford-blue-light);
   background-color: transparent;
   color: var(--lacort-white);
+}
+
+:root[data-theme="dark"] .lacort-footer__legal {
+  background-color: var(--lacort-oxford-blue-mid);
+  color: var(--lacort-white);
+}
+
+:root[data-theme="dark"] .lacort-footer__legal :where(a:any-link),
+:root[data-theme="dark"] .lacort-footer__legal :where(a:visited),
+:root[data-theme="dark"] .lacort-footer__legal :where(a:any-link:hover) {
+  color: var(--lacort-white);
+}
+
+:root[data-theme="dark"] .lacort-notice {
+  background-color: var(--lacort-amber);
+  color: var(--lacort-oxford-blue);
 }
 
 :root[data-theme="dark"] .lacort-footer {
