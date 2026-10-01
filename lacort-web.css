@@ -46,6 +46,7 @@
   --lacort-oxford-blue: #002147;
   --lacort-oxford-blue-mid: #1F4E8C;
   --lacort-oxford-blue-light: #9DB9D9;
+  --lacort-oxford-night: #001124;
   --lacort-indigo: #3F4AA8;
   --lacort-indigo-mid: #5B67C7;
   --lacort-indigo-light: #A9B0E0;
@@ -704,7 +705,7 @@ textarea {
   }
 
   body {
-    background-color: var(--lacort-oxford-blue);
+    background-color: var(--lacort-oxford-night);
     color: var(--lacort-white);
   }
 
