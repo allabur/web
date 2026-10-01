@@ -1,0 +1,342 @@
+/*
+ * lacort-web.css: Alberto Lacort brand for websites and interfaces.
+ * Source of truth: brand/BRAND_SPEC.md, sections 2.4, 4.3, 4.7 and 8.8.
+ * Copy this file together with the fonts/ folder next to it.
+ *
+ * Link rules use :where() so that their specificity is zero. Link-styled
+ * buttons and host themes then override them without !important. They match
+ * only real links (:any-link), not anchors without href.
+ */
+
+/* Fonts (spec 4.7) ----------------------------------------------------------- */
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/Poppins-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("fonts/InterVariable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("fonts/InterVariable-Italic.woff2") format("woff2");
+}
+
+/* Tokens --------------------------------------------------------------------- */
+
+:root {
+  /* Brand colours (spec 1.1 and 1.3) */
+  --lacort-oxford-blue: #002147;
+  --lacort-oxford-blue-mid: #1F4E8C;
+  --lacort-oxford-blue-light: #9DB9D9;
+  --lacort-indigo: #3F4AA8;
+  --lacort-indigo-mid: #5B67C7;
+  --lacort-indigo-light: #A9B0E0;
+  --lacort-amber: #F5B000;
+  --lacort-amber-15: #FEF3D9;
+  --lacort-white: #FFFFFF;
+  --lacort-gray-light: #F1F1F1;
+  --lacort-gray-mid: #CFCFCF;
+  --lacort-text-secondary: #5B6770;
+  --lacort-text: #3F4444;
+
+  /* Status (spec 2.1) */
+  --lacort-success: #2E8B57;
+  --lacort-warning: #F5B000;
+  --lacort-danger: #AA151B;
+  --lacort-info: #1F4E8C;
+  --lacort-neutral: #A9AFB4;
+
+  /* Font stacks (spec 4.3) */
+  --ui-font-title: Poppins, Arial, sans-serif;
+  --ui-font-text: Inter, Arial, sans-serif;
+  --font-code: Consolas, Menlo, Inconsolata, monospace;
+
+  /* Type scale (spec 4.7). Headings grow linearly from a 320 px to a 1280 px window. */
+  --ui-size-h1: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  --ui-size-h2: clamp(1.875rem, 1.625rem + 1.25vw, 2.625rem);
+  --ui-size-h3: clamp(1.5rem, 1.416667rem + 0.416667vw, 1.75rem);
+  --ui-size-lead: 1.25rem;
+  --ui-size-text: 1rem;
+  --ui-size-menu: 0.875rem;
+  --ui-size-small: 0.75rem;
+  --ui-leading-text: 1.5;
+  --ui-leading-title: 1.2;
+}
+
+/* Text ----------------------------------------------------------------------- */
+
+body {
+  background-color: var(--lacort-white);
+  color: var(--lacort-text);
+  font-family: var(--ui-font-text);
+  font-size: var(--ui-size-text);
+  line-height: var(--ui-leading-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--lacort-oxford-blue);
+  font-family: var(--ui-font-title);
+  font-weight: 700;
+  line-height: var(--ui-leading-title);
+}
+
+h1 {
+  font-size: var(--ui-size-h1);
+}
+
+h2 {
+  font-size: var(--ui-size-h2);
+}
+
+h3 {
+  font-size: var(--ui-size-h3);
+}
+
+h4,
+h5,
+h6 {
+  font-size: var(--ui-size-text);
+}
+
+.lacort-lead {
+  font-size: var(--ui-size-lead);
+}
+
+.lacort-menu {
+  font-size: var(--ui-size-menu);
+}
+
+.lacort-small {
+  font-size: var(--ui-size-small);
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-code);
+}
+
+/* Long lines scroll inside the block, not the page (WCAG 1.4.10). */
+pre {
+  overflow-x: auto;
+  background-color: var(--lacort-gray-light);
+  color: var(--lacort-text);
+}
+
+/* Links (spec 2.4): always underlined ---------------------------------------- */
+
+:where(a:any-link) {
+  color: var(--lacort-oxford-blue);
+  text-decoration: underline;
+}
+
+:where(a:visited) {
+  color: var(--lacort-oxford-blue);
+}
+
+/* After :visited, so a hovered visited link changes colour too. */
+:where(a:any-link:hover) {
+  color: var(--lacort-oxford-blue-mid);
+}
+
+/* Focus (spec 2.4) ----------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px dashed var(--lacort-oxford-blue);
+  outline-offset: 2px;
+}
+
+/* Bands and footer (spec 2.4) ------------------------------------------------ */
+
+.lacort-band {
+  background-color: var(--lacort-gray-light);
+  color: var(--lacort-text);
+}
+
+.lacort-band--indigo {
+  background-color: var(--lacort-indigo-light);
+  color: var(--lacort-oxford-blue);
+}
+
+/* Oxford Blue medio gives 3.95:1 on Indigo light. */
+.lacort-band--indigo :where(a:any-link:hover) {
+  color: var(--lacort-oxford-blue);
+}
+
+.lacort-band--amber {
+  background-color: var(--lacort-amber-15);
+  color: var(--lacort-text);
+}
+
+.lacort-footer,
+.lacort-band--dark {
+  background-color: var(--lacort-oxford-blue);
+  color: var(--lacort-white);
+}
+
+.lacort-footer h1,
+.lacort-footer h2,
+.lacort-footer h3,
+.lacort-footer h4,
+.lacort-footer h5,
+.lacort-footer h6,
+.lacort-band--dark h1,
+.lacort-band--dark h2,
+.lacort-band--dark h3,
+.lacort-band--dark h4,
+.lacort-band--dark h5,
+.lacort-band--dark h6 {
+  color: var(--lacort-white);
+}
+
+.lacort-footer :where(a:any-link),
+.lacort-footer :where(a:visited),
+.lacort-band--dark :where(a:any-link),
+.lacort-band--dark :where(a:visited) {
+  color: var(--lacort-oxford-blue-light);
+}
+
+.lacort-footer :where(a:any-link:hover),
+.lacort-band--dark :where(a:any-link:hover) {
+  color: var(--lacort-white);
+}
+
+.lacort-footer :focus-visible,
+.lacort-band--dark :focus-visible {
+  outline-color: var(--lacort-white);
+}
+
+/* Buttons (spec 2.4 and 4.7). Declared after the links so they win ties. ----- */
+/* On oxford-blue backgrounds, use only the outline button (spec 2.4). */
+
+.lacort-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding-inline: 1.5rem;
+  border: 2px solid var(--lacort-oxford-blue-mid);
+  border-radius: 0;
+  background-color: var(--lacort-oxford-blue-mid);
+  color: var(--lacort-white);
+  font-family: var(--ui-font-text);
+  font-size: var(--ui-size-menu);
+  font-weight: 700;
+  line-height: var(--ui-leading-text);
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.lacort-button:hover {
+  border-color: var(--lacort-oxford-blue);
+  background-color: var(--lacort-oxford-blue);
+  color: var(--lacort-white);
+}
+
+.lacort-button--outline {
+  border-color: var(--lacort-oxford-blue-mid);
+  background-color: var(--lacort-white);
+  color: var(--lacort-oxford-blue-mid);
+}
+
+.lacort-button--outline:hover {
+  border-color: var(--lacort-oxford-blue-mid);
+  background-color: var(--lacort-oxford-blue-mid);
+  color: var(--lacort-white);
+}
+
+.lacort-button--resource {
+  border-color: var(--lacort-text);
+  background-color: var(--lacort-text);
+  color: var(--lacort-white);
+}
+
+.lacort-button--resource:hover {
+  border-color: var(--lacort-oxford-blue);
+  background-color: var(--lacort-oxford-blue);
+  color: var(--lacort-white);
+}
+
+.lacort-button:disabled,
+.lacort-button:disabled:hover,
+.lacort-button[aria-disabled="true"],
+.lacort-button[aria-disabled="true"]:hover {
+  border-color: var(--lacort-gray-mid);
+  background-color: var(--lacort-white);
+  color: var(--lacort-text-secondary);
+  cursor: not-allowed;
+}
+
+/* High contrast mode replaces author colours: keep the inactive state visible. */
+@media (forced-colors: active) {
+  .lacort-button:disabled,
+  .lacort-button:disabled:hover,
+  .lacort-button[aria-disabled="true"],
+  .lacort-button[aria-disabled="true"]:hover {
+    border-color: GrayText;
+    color: GrayText;
+  }
+}
+
+/* Form fields (spec 2.4 and 4.7). Text-like inputs only. --------------------- */
+
+input:where(:not([type="submit"], [type="button"], [type="reset"], [type="image"], [type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"])),
+select,
+textarea {
+  box-sizing: border-box;
+  min-height: 2.75rem;
+  border: 1px solid var(--lacort-text-secondary);
+  border-radius: 0;
+  background-color: var(--lacort-white);
+  color: var(--lacort-text);
+  font-family: var(--ui-font-text);
+  font-size: var(--ui-size-text);
+  line-height: var(--ui-leading-text);
+}
+
+/* Page structure (spec 8.8, 8.11) -------------------------------------------- */
+
+.lacort-skip {
+  position: absolute;
+  transform: translateY(-200%);
+}
+
+.lacort-skip:focus {
+  transform: none;
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  background-color: var(--lacort-oxford-blue);
+  color: var(--lacort-white);
+}
+
+.lacort-page {
+  box-sizing: border-box;
+  max-width: 70ch;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.lacort-site {
+  margin: 0;
+}
