@@ -46,33 +46,116 @@ ul.task-list li input[type="checkbox"] {
 
 
 <a class="lacort-skip" href="#main-content">Skip to content</a>
-<header class="lacort-page">
+<header class="lacort-header">
 <a href="index.html"><img src="../img/wordmark-positive.svg" alt="Alberto Lacort" height="40"></a>
-<nav class="lacort-menu" aria-label="Main">
-<a data-menu="item" href="index.html">Home</a> · <a data-menu="item" href="research.html">Research</a> · <a data-menu="item" href="publications.html">Publications</a> · <a data-menu="item" href="software.html">Software</a> · <a data-menu="item" href="talks.html">Talks</a> · <a data-menu="item" href="teaching.html">Teaching</a> · <a data-menu="item" href="open-science.html">Open science</a> · <a data-menu="item" href="cv.html">CV</a> · <a data-menu="item" href="contact.html">Contact</a>
+<span class="lacort-nav__control">
+<input type="checkbox" id="lacort-menu-toggle" class="lacort-nav__toggle">
+<label for="lacort-menu-toggle" class="lacort-nav__button lacort-button lacort-button--outline">Menu</label>
+</span>
+<nav class="lacort-menu lacort-nav" aria-label="Main">
+<ul class="lacort-nav__list">
+<li><a data-menu="item" href="index.html">Home</a></li>
+<li><a data-menu="item" href="research.html">Research</a></li>
+<li><a data-menu="item" href="publications.html">Publications</a></li>
+<li><a data-menu="item" href="software.html">Software</a></li>
+<li><a data-menu="item" href="talks.html">Talks</a></li>
+<li><a data-menu="item" href="teaching.html">Teaching</a></li>
+<li><a data-menu="item" href="open-science.html">Open science</a></li>
+<li><a data-menu="item" href="cv.html">CV</a></li>
+<li><a data-menu="item" href="contact.html">Contact</a></li>
+</ul>
 </nav>
-<p class="lacort-small"><a hreflang="es" lang="es" href="../es/index.html">ES</a></p>
+<a class="lacort-button lacort-button--outline" hreflang="es" lang="es" href="../es/index.html">ES</a>
 </header>
-<main id="main-content" class="lacort-page">
-<h1>Alberto Lacort</h1>
-<p>PhD student and researcher in the ROGLE group, Department of Business Organisation, Universitat Politècnica de València.</p>
+<main id="main-content"><div class="lacort-hero lacort-band--dark">
+<div class="lacort-hero__inner">
+<div class="lacort-hero__text">
+<p class="lacort-hero__kicker">
+Operations research in health care
+</p>
+<h1 id="alberto-lacort">Alberto Lacort</h1>
 <div class="lacort-lead">
 <p>I research hospital bed management and patient flow simulation.</p>
 </div>
-<p><a href="https://orcid.org/0000-0001-7571-0494">ORCID</a> · <a href="https://scholar.google.com/citations?hl=en&amp;user=XHItL4MAAAAJ">Google Scholar</a> · <a href="https://www.linkedin.com/in/alberto-lacort">LinkedIn</a> · <a href="https://github.com/allabur">GitHub</a> · <a href="mailto:alberto.lacort@upv.es">Email</a></p>
-<h2 id="highlights">Highlights</h2>
-<ul>
-<li><a href="publications.html">Publications</a>: conference papers and book chapters.</li>
-<li><a href="research.html">Research</a>: lines of work.</li>
+<p>PhD student in Industrial Engineering at Polytechnique Montréal and the Universitat Politècnica de València. ROGLE group, Department of Business Organisation.</p>
+<p><a href="publications.html" class="lacort-button lacort-button--outline">Publications</a> <a href="cv.html" class="lacort-button lacort-button--outline">CV</a></p>
+</div>
+<p><img class="lacort-hero__photo" src="../img/alberto-lacort-640.jpg" srcset="../img/alberto-lacort-640.jpg 640w, ../img/alberto-lacort-1280.jpg 1280w" sizes="(min-width: 48rem) 40vw, 100vw" width="640" height="640" fetchpriority="high" alt="Portrait of Alberto Lacort smiling, wearing a suit with his arms crossed, in a garden"></p>
+</div>
+</div>
+<div class="lacort-section">
+<section id="research-lines" class="lacort-reveal lacort-wide">
+<h2 class="lacort-reveal">Research lines</h2>
+<ul class="lacort-grid">
+<li class="lacort-card lacort-reveal">
+<h3>
+Hospital bed management
+</h3>
+<p>
+Strategies to admit, discharge and reconfigure beds, and a conceptual framework to model them.
+</p>
+</li>
+<li class="lacort-card lacort-reveal">
+<h3>
+Patient flow simulation
+</h3>
+<p>
+Discrete event simulation of inpatient units and the validation of the models.
+</p>
+</li>
+<li class="lacort-card lacort-reveal">
+<h3>
+Surgical blocks
+</h3>
+<p>
+Capacity management of surgical blocks and digital twins of a sterilisation centre.
+</p>
+</li>
 </ul>
+</section>
+</div>
+<div class="lacort-band lacort-section">
+<section id="recent-publications" class="lacort-reveal lacort-wide">
+<h2 class="lacort-reveal">Recent publications</h2>
+<ul class="lacort-grid">
+<li class="lacort-card lacort-reveal">
+<h3>
+<a href="https://doi.org/10.1007/978-3-031-78241-1_16">Hospital bed management modelling: A conceptual framework</a>
+</h3>
+<p class="lacort-small">
+Decision sciences, Springer, 2025
+</p>
+</li>
+<li class="lacort-card lacort-reveal">
+<h3>
+<a href="https://doi.org/10.1007/978-3-031-82334-3_115">Discrete event simulation for hospital inpatient flow modelling: A review of validation methods</a>
+</h3>
+<p class="lacort-small">
+Organizational engineering, coping with complexity, Springer, 2025
+</p>
+</li>
+</ul>
+<p><a href="publications.html" class="lacort-button">See all publications</a></p>
+</section>
+</div>
+<div class="lacort-band--amber lacort-section">
+<section id="shall-we-collaborate" class="lacort-reveal lacort-wide">
+<h2 class="lacort-reveal">Shall we collaborate?</h2>
+<p>Write to me at <a href="mailto:alberto.lacort@upv.es">alberto.lacort@upv.es</a>.</p>
+</section>
+</div>
 
-<p class="lacort-small">Last updated: <time class="lacort-updated" datetime="2026-10-01">1 October 2026</time></p>
+<div class="lacort-wide"><p class="lacort-small">Last updated: <time class="lacort-updated" datetime="2026-10-01">1 October 2026</time></p></div>
 </main>
-<footer class="lacort-footer"><div class="lacort-page">
-<p><a href="https://www.upv.es">Universitat Politècnica de València</a> · 
-<a href="https://rogle.webs.upv.es">ROGLE</a> · 
-<a href="mailto:alberto.lacort@upv.es">alberto.lacort@upv.es</a></p>
-<p class="lacort-small"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Content under the CC BY-NC-SA 4.0 licence</a></p>
+<footer class="lacort-footer"><div class="lacort-wide lacort-footer__grid">
+<div class="lacort-footer__col"><h2 class="lacort-footer__title">Where I work</h2>
+<p><a href="https://www.upv.es">Universitat Politècnica de València</a><br>
+<a href="https://rogle.webs.upv.es">ROGLE</a></p></div>
+<div class="lacort-footer__col"><h2 class="lacort-footer__title">Profiles</h2>
+<p><a href="mailto:alberto.lacort@upv.es">alberto.lacort@upv.es</a><br>
+<a href="https://orcid.org/0000-0001-7571-0494">ORCID</a> · <a href="https://scholar.google.com/citations?hl=en&amp;user=XHItL4MAAAAJ">Google Scholar</a><br>
+<a href="https://www.linkedin.com/in/alberto-lacort">LinkedIn</a> · <a href="https://github.com/allabur">GitHub</a></p></div>
+<div class="lacort-footer__col"><p class="lacort-small"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Content under the CC BY-NC-SA 4.0 licence</a></p></div>
 </div></footer>
 
 

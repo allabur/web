@@ -46,15 +46,32 @@ ul.task-list li input[type="checkbox"] {
 
 
 <a class="lacort-skip" href="#main-content">Saltar al contenido</a>
-<header class="lacort-page">
+<header class="lacort-header">
 <a href="index.html"><img src="../img/wordmark-positive.svg" alt="Alberto Lacort" height="40"></a>
-<nav class="lacort-menu" aria-label="Principal">
-<a data-menu="item" href="index.html">Inicio</a> · <a data-menu="item" href="research.html">Investigación</a> · <a data-menu="item" href="publications.html">Publicaciones</a> · <a data-menu="item" href="software.html">Software</a> · <a data-menu="item" href="talks.html">Charlas</a> · <a data-menu="item" href="teaching.html">Docencia</a> · <a data-menu="item" href="open-science.html">Ciencia abierta</a> · <a data-menu="item" href="cv.html">CV</a> · <a data-menu="item" href="contact.html">Contacto</a>
+<span class="lacort-nav__control">
+<input type="checkbox" id="lacort-menu-toggle" class="lacort-nav__toggle">
+<label for="lacort-menu-toggle" class="lacort-nav__button lacort-button lacort-button--outline">Menú</label>
+</span>
+<nav class="lacort-menu lacort-nav" aria-label="Principal">
+<ul class="lacort-nav__list">
+<li><a data-menu="item" href="index.html">Inicio</a></li>
+<li><a data-menu="item" href="research.html">Investigación</a></li>
+<li><a data-menu="item" href="publications.html">Publicaciones</a></li>
+<li><a data-menu="item" href="software.html">Software</a></li>
+<li><a data-menu="item" href="talks.html">Charlas</a></li>
+<li><a data-menu="item" href="teaching.html">Docencia</a></li>
+<li><a data-menu="item" href="open-science.html">Ciencia abierta</a></li>
+<li><a data-menu="item" href="cv.html">CV</a></li>
+<li><a data-menu="item" href="contact.html">Contacto</a></li>
+</ul>
 </nav>
-<p class="lacort-small"><a hreflang="en" lang="en" href="../en/research.html">EN</a></p>
+<a class="lacort-button lacort-button--outline" hreflang="en" lang="en" href="../en/research.html">EN</a>
 </header>
-<main id="main-content" class="lacort-page">
+<main id="main-content"><div class="lacort-titleband lacort-band--dark"><div class="lacort-page">
 <h1>Investigación</h1>
+
+</div></div>
+<div class="lacort-section"><div class="lacort-page">
 <p>Mis líneas de trabajo, según mis publicaciones:</p>
 <ul>
 <li>Modelado de la gestión de camas hospitalarias.</li>
@@ -62,13 +79,17 @@ ul.task-list li input[type="checkbox"] {
 <li>Gestión de la capacidad de los bloques quirúrgicos.</li>
 </ul>
 
-<p class="lacort-small">Última actualización: <time class="lacort-updated" datetime="2026-10-01">1 de octubre de 2026</time></p>
+<p class="lacort-small">Última actualización: <time class="lacort-updated" datetime="2026-10-01">1 de octubre de 2026</time></p></div></div>
 </main>
-<footer class="lacort-footer"><div class="lacort-page">
-<p><a href="https://www.upv.es">Universitat Politècnica de València</a> · 
-<a href="https://rogle.webs.upv.es">ROGLE</a> · 
-<a href="mailto:alberto.lacort@upv.es">alberto.lacort@upv.es</a></p>
-<p class="lacort-small"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Contenido bajo licencia CC BY-NC-SA 4.0</a></p>
+<footer class="lacort-footer"><div class="lacort-wide lacort-footer__grid">
+<div class="lacort-footer__col"><h2 class="lacort-footer__title">Dónde trabajo</h2>
+<p><a href="https://www.upv.es">Universitat Politècnica de València</a><br>
+<a href="https://rogle.webs.upv.es">ROGLE</a></p></div>
+<div class="lacort-footer__col"><h2 class="lacort-footer__title">Perfiles</h2>
+<p><a href="mailto:alberto.lacort@upv.es">alberto.lacort@upv.es</a><br>
+<a href="https://orcid.org/0000-0001-7571-0494">ORCID</a> · <a href="https://scholar.google.com/citations?hl=en&amp;user=XHItL4MAAAAJ">Google Scholar</a><br>
+<a href="https://www.linkedin.com/in/alberto-lacort">LinkedIn</a> · <a href="https://github.com/allabur">GitHub</a></p></div>
+<div class="lacort-footer__col"><p class="lacort-small"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Contenido bajo licencia CC BY-NC-SA 4.0</a></p></div>
 </div></footer>
 
 
