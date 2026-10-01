@@ -424,6 +424,10 @@ textarea {
   transform: translateY(-0.25rem);
 }
 
+.lacort-card h3 {
+  font-size: var(--ui-size-lead);
+}
+
 .lacort-card > :first-child {
   margin-top: 0;
 }
