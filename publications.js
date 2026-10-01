@@ -1,5 +1,5 @@
 /*
- * publications.js: filter the publications by category (spec 8.11).
+ * publications.js: filter the publications by category and copy citations (spec 8.11).
  * The address #category=<tag> picks the category. Without it, or with an unknown tag,
  * every publication shows. Without JavaScript the list is complete and the category
  * block stays hidden.
@@ -18,7 +18,31 @@
     return "";
   }
 
+  function wireCopyButtons() {
+    var buttons = document.querySelectorAll("[data-copy-citation]");
+    if (typeof navigator === "undefined" || !navigator.clipboard) {
+      return;
+    }
+    for (var i = 0; i < buttons.length; i++) {
+      (function (button) {
+        var original = button.textContent;
+        button.removeAttribute("hidden");
+        button.addEventListener("click", function () {
+          var scope = button.closest("article, main");
+          var citation = scope.querySelector(".csl-entry").textContent.trim();
+          return navigator.clipboard.writeText(citation).then(function () {
+            button.textContent = button.dataset.labelCopied;
+            setTimeout(function () {
+              button.textContent = original;
+            }, 2000);
+          });
+        });
+      })(buttons[i]);
+    }
+  }
+
   function init() {
+    wireCopyButtons();
     var entries = document.querySelectorAll(".lacort-pub");
     var links = document.querySelectorAll("[data-category]");
     var sections = document.querySelectorAll("[data-pub-section]");

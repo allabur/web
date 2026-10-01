@@ -1,52 +1,38 @@
 /*
- * lacort-theme.js: light, dark or system theme (spec 2.5).
+ * lacort-theme.js: light or dark theme, system by default (spec 2.5).
  * Load it in <head>, without defer, so the theme is set before the first paint.
- * It writes data-theme ("light" or "dark") and data-theme-mode ("system", "light" or
- * "dark") on <html>, and wires the button [data-lacort-theme-toggle].
+ * It writes data-theme ("light" or "dark") on <html>. Without a stored choice, the system
+ * decides. The button [data-lacort-theme-toggle] picks the opposite of the current theme.
  */
 (function () {
   "use strict";
 
   var KEY = "lacort-theme";
-  var MODES = ["system", "light", "dark"];
   var root = document.documentElement;
   var query = matchMedia("(prefers-color-scheme: dark)");
   var button = null;
 
-  function readMode() {
+  function stored() {
     try {
       var value = localStorage.getItem(KEY);
-      return value === "light" || value === "dark" ? value : "system";
+      return value === "light" || value === "dark" ? value : null;
     } catch (error) {
-      return "system";
+      return null;
     }
   }
 
-  function writeMode(mode) {
-    try {
-      if (mode === "system") {
-        localStorage.removeItem(KEY);
-      } else {
-        localStorage.setItem(KEY, mode);
-      }
-    } catch (error) {
-      /* Storage is blocked: the choice lasts until the page closes. */
-    }
-  }
+  var choice = stored();
 
-  var mode = readMode();
+  function current() {
+    return choice || (query.matches ? "dark" : "light");
+  }
 
   function apply() {
-    var theme = mode === "system" ? (query.matches ? "dark" : "light") : mode;
+    var theme = current();
     root.setAttribute("data-theme", theme);
-    root.setAttribute("data-theme-mode", mode);
     if (button) {
-      var labels = {
-        system: button.dataset.labelSystem,
-        light: button.dataset.labelLight,
-        dark: button.dataset.labelDark,
-      };
-      button.textContent = labels[mode];
+      var label = theme === "dark" ? button.dataset.labelToLight : button.dataset.labelToDark;
+      button.setAttribute("aria-label", label);
     }
   }
 
@@ -55,8 +41,12 @@
     if (button) {
       button.removeAttribute("hidden");
       button.addEventListener("click", function () {
-        mode = MODES[(MODES.indexOf(mode) + 1) % MODES.length];
-        writeMode(mode);
+        choice = current() === "dark" ? "light" : "dark";
+        try {
+          localStorage.setItem(KEY, choice);
+        } catch (error) {
+          /* Storage is blocked: the choice lasts until the page closes. */
+        }
         apply();
       });
     }
@@ -64,7 +54,7 @@
   }
 
   query.addEventListener("change", function () {
-    if (mode === "system") {
+    if (!choice) {
       apply();
     }
   });
