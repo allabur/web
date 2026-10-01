@@ -913,12 +913,22 @@ textarea {
   color: var(--lacort-white);
 }
 
-:root[data-theme="dark"] .lacort-button,
-:root[data-theme="dark"] .lacort-button--outline,
-:root[data-theme="dark"] .lacort-button--resource {
+:root[data-theme="dark"] .lacort-button {
+  border-color: var(--lacort-amber);
+  background-color: var(--lacort-amber);
+  color: var(--lacort-oxford-blue);
+}
+
+:root[data-theme="dark"] .lacort-button--outline {
   border-color: var(--lacort-white);
   background-color: transparent;
   color: var(--lacort-white);
+}
+
+:root[data-theme="dark"] .lacort-button--resource {
+  border-color: var(--lacort-oxford-blue-light);
+  background-color: transparent;
+  color: var(--lacort-oxford-blue-light);
 }
 
 :root[data-theme="dark"] .lacort-button:hover,
