@@ -37,6 +37,8 @@
 /* Tokens --------------------------------------------------------------------- */
 
 :root {
+  color-scheme: light dark;
+
   /* Brand colours (spec 1.1 and 1.3) */
   --lacort-oxford-blue: #002147;
   --lacort-oxford-blue-mid: #1F4E8C;
@@ -669,5 +671,151 @@ textarea {
 @media print {
   .lacort-reveal {
     animation: none;
+  }
+}
+
+/* Dark theme (spec 2.5). Last, so it wins the cascade. ------------------------ */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--lacort-oxford-blue);
+    color: var(--lacort-white);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--lacort-white);
+  }
+
+  :where(a:any-link),
+  :where(a:visited) {
+    color: var(--lacort-oxford-blue-light);
+  }
+
+  :where(a:any-link:hover) {
+    color: var(--lacort-white);
+  }
+
+  :focus-visible {
+    outline-color: var(--lacort-white);
+  }
+
+  .lacort-skip:focus {
+    background-color: var(--lacort-white);
+    color: var(--lacort-oxford-blue);
+  }
+
+  .lacort-band {
+    background-color: var(--lacort-oxford-blue-mid);
+    color: var(--lacort-white);
+  }
+
+  .lacort-band--indigo {
+    background-color: var(--lacort-indigo);
+    color: var(--lacort-white);
+  }
+
+  .lacort-band--amber {
+    background-color: var(--lacort-amber);
+    color: var(--lacort-oxford-blue);
+  }
+
+  .lacort-band :where(a:any-link),
+  .lacort-band :where(a:visited),
+  .lacort-band :where(a:any-link:hover),
+  .lacort-band--indigo :where(a:any-link),
+  .lacort-band--indigo :where(a:visited),
+  .lacort-band--indigo :where(a:any-link:hover) {
+    color: var(--lacort-white);
+  }
+
+  .lacort-band--amber :where(a:any-link),
+  .lacort-band--amber :where(a:visited),
+  .lacort-band--amber :where(a:any-link:hover) {
+    color: var(--lacort-oxford-blue);
+  }
+
+  .lacort-band :where(a:any-link:hover),
+  .lacort-band--indigo :where(a:any-link:hover),
+  .lacort-band--amber :where(a:any-link:hover) {
+    text-decoration-thickness: 0.2em;
+  }
+
+  .lacort-card {
+    border-color: var(--lacort-oxford-blue-light);
+    background-color: var(--lacort-oxford-blue);
+    color: var(--lacort-white);
+  }
+
+  .lacort-card:hover,
+  .lacort-card:focus-within {
+    border-color: var(--lacort-amber);
+  }
+
+  .lacort-tags li {
+    border-color: var(--lacort-oxford-blue-light);
+    color: var(--lacort-oxford-blue-light);
+  }
+
+  .lacort-pub {
+    border-top-color: var(--lacort-oxford-blue-mid);
+  }
+
+  .lacort-pub__summary {
+    color: var(--lacort-oxford-blue-light);
+  }
+
+  .lacort-timeline {
+    border-left-color: var(--lacort-oxford-blue-light);
+  }
+
+  .lacort-timeline > li::before {
+    border-color: var(--lacort-oxford-blue-light);
+  }
+
+  pre {
+    background-color: var(--lacort-oxford-blue-mid);
+    color: var(--lacort-white);
+  }
+
+  .lacort-button,
+  .lacort-button--outline,
+  .lacort-button--resource {
+    border-color: var(--lacort-white);
+    background-color: transparent;
+    color: var(--lacort-white);
+  }
+
+  .lacort-button:hover,
+  .lacort-button--outline:hover,
+  .lacort-button--resource:hover {
+    border-color: var(--lacort-white);
+    background-color: var(--lacort-white);
+    color: var(--lacort-oxford-blue);
+  }
+
+  .lacort-button:disabled,
+  .lacort-button:disabled:hover,
+  .lacort-button[aria-disabled="true"],
+  .lacort-button[aria-disabled="true"]:hover {
+    border-color: var(--lacort-oxford-blue-mid);
+    background-color: transparent;
+    color: var(--lacort-oxford-blue-mid);
+  }
+
+  input:where(:not([type="submit"], [type="button"], [type="reset"], [type="image"], [type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"])),
+  select,
+  textarea {
+    border-color: var(--lacort-oxford-blue-light);
+    background-color: transparent;
+    color: var(--lacort-white);
+  }
+
+  .lacort-footer {
+    border-top: 0.25rem solid var(--lacort-oxford-blue-mid);
   }
 }
