@@ -25,15 +25,16 @@
     }
     for (var i = 0; i < buttons.length; i++) {
       (function (button) {
-        var original = button.textContent;
+        var label = button.querySelector("[data-copy-label]") || button;
+        var original = label.textContent;
         button.removeAttribute("hidden");
         button.addEventListener("click", function () {
           var scope = button.closest("article, main");
           var citation = scope.querySelector(".csl-entry").textContent.trim();
           return navigator.clipboard.writeText(citation).then(function () {
-            button.textContent = button.dataset.labelCopied;
+            label.textContent = button.dataset.labelCopied;
             setTimeout(function () {
-              button.textContent = original;
+              label.textContent = original;
             }, 2000);
           });
         });
