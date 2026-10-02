@@ -34,9 +34,9 @@ ul.task-list li input[type="checkbox"] {
 <link rel="alternate" hreflang="es" href="es/index.html">
 <link rel="alternate" hreflang="en" href="en/index.html">
 <link rel="alternate" hreflang="x-default" href="index.html">
-<meta http-equiv="refresh" content="0; url=es/index.html">
 <link rel="icon" type="image/svg+xml" href="img/monogram-positive.svg">
 <meta name="color-scheme" content="light dark">
+
 <script src="lacort-theme.js"></script>
 
 
@@ -46,17 +46,116 @@ ul.task-list li input[type="checkbox"] {
 <body class="lacort-site">
 
 
+<!-- Quarto prints no title block: the page frame in lacort-site.lua prints the h1. -->
 
 
+<a class="lacort-skip" href="#main-content">Saltar al contenido</a>
+<header class="lacort-header">
+<a href="index.html"><img class="lacort-logo--light" src="img/wordmark-positive.svg" alt="Alberto Lacort" height="40"><img class="lacort-logo--dark" src="img/wordmark-negative.svg" alt="Alberto Lacort" height="40"></a>
+<span class="lacort-nav__control">
+<input type="checkbox" id="lacort-menu-toggle" class="lacort-nav__toggle">
+<label for="lacort-menu-toggle" class="lacort-nav__button lacort-button lacort-button--outline">Menú</label>
+</span>
+<nav class="lacort-menu lacort-nav" aria-label="Principal">
+<ul class="lacort-nav__list">
+<li><a data-menu="item" href="index.html">Inicio</a></li>
+<li><a data-menu="item" href="es/cv.html">CV</a></li>
+<li><a data-menu="item" href="es/research.html">Investigación</a></li>
+<li><a data-menu="item" href="es/teaching.html">Docencia</a></li>
+<li><a data-menu="item" href="es/blog.html">Blog</a></li>
+<li><a data-menu="item" href="es/resources.html">Recursos</a></li>
+</ul>
+</nav>
+<div class="lacort-header__tools">
+<button type="button" class="lacort-button lacort-button--outline lacort-square lacort-theme-toggle" hidden="" data-lacort-theme-toggle="" data-label-to-dark="Cambiar a tema oscuro" data-label-to-light="Cambiar a tema claro" aria-label="Cambiar a tema oscuro"><svg class="lacort-theme-toggle__moon" viewbox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"></path></svg><svg class="lacort-theme-toggle__sun" viewbox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></button>
+<a class="lacort-button lacort-button--outline lacort-square" hreflang="en" lang="en" href="en/index.html">EN</a>
+</div>
+</header>
 
-<a class="lacort-skip" href="#main-content">Saltar al contenido · Skip to content</a>
-<main id="main-content" class="lacort-wide"><img class="lacort-logo--light" src="img/wordmark-positive.svg" alt="Alberto Lacort" height="40"><img class="lacort-logo--dark" src="img/wordmark-negative.svg" alt="Alberto Lacort" height="40">
-<h1>Alberto Lacort</h1>
-<p>Investigación operativa en salud · Operations research in health care</p>
-<p>Te llevo a la versión en español. · Taking you to the Spanish version.</p>
+<main id="main-content"><div class="lacort-band--amber lacort-notice" role="note">
+<div class="lacort-wide">
+<p><strong>Web en construcción.</strong> Los contenidos, enlaces y datos de esta página son provisionales: pueden cambiar o ser incorrectos mientras la monto.</p>
+</div>
+</div>
+<div class="lacort-hero lacort-band--dark">
+<div class="lacort-hero__inner">
+<div class="lacort-hero__text">
+<p class="lacort-hero__kicker">
+Investigación operativa en salud
+</p>
+<h1 id="alberto-lacort">Alberto Lacort</h1>
+<div class="lacort-lead">
+<p>Investigo la gestión de camas hospitalarias y la simulación del flujo de pacientes.</p>
+</div>
+<p>Doctorando en Ingeniería Industrial en Polytechnique Montréal y en la Universitat Politècnica de València. Grupo ROGLE, Departamento de Organización de Empresas.</p>
+<p><a href="es/research.html" class="lacort-button lacort-button--outline">Investigación</a> <a href="es/cv.html" class="lacort-button lacort-button--outline">CV</a></p>
+</div>
+<p><img class="lacort-hero__photo" src="img/alberto-lacort-640.jpg" srcset="img/alberto-lacort-640.jpg 640w, img/alberto-lacort-1280.jpg 1280w" sizes="(min-width: 48rem) 40vw, 100vw" width="640" height="640" fetchpriority="high" alt="Retrato de Alberto Lacort sonriendo, con traje y los brazos cruzados, en un jardín"></p>
+</div>
+</div>
+<div class="lacort-section">
+<section id="líneas-de-investigación" class="lacort-reveal lacort-wide">
+<h2 class="lacort-reveal">Líneas de investigación</h2>
+<ul class="lacort-grid">
+<li class="lacort-card lacort-reveal">
+<h3>
+<a href="es/research.html#category=Bed management">Gestión de camas hospitalarias</a>
+</h3>
+<p>
+Estrategias para admitir, dar el alta y reconfigurar camas, y un marco conceptual para modelarlas.
+</p>
+</li>
+<li class="lacort-card lacort-reveal">
+<h3>
+<a href="es/research.html#category=Discrete event simulation">Simulación del flujo de pacientes</a>
+</h3>
+<p>
+Simulación de eventos discretos de las unidades de hospitalización y validación de los modelos.
+</p>
+</li>
+<li class="lacort-card lacort-reveal">
+<h3>
+<a href="es/research.html#category=Surgical block">Bloques quirúrgicos</a>
+</h3>
+<p>
+Gestión de la capacidad de los bloques quirúrgicos y gemelos digitales de una central de esterilización.
+</p>
+</li>
+</ul>
+</section>
+</div>
+<div class="lacort-band lacort-section">
+<section id="publicaciones-recientes" class="lacort-reveal lacort-wide">
+<h2 class="lacort-reveal">Publicaciones recientes</h2>
+<ul class="lacort-grid">
+<li class="lacort-card lacort-reveal">
+<h3>
+<a href="https://doi.org/10.1007/978-3-031-78241-1_16">Hospital bed management modelling: A conceptual framework</a>
+</h3>
+<p class="lacort-small">
+Decision sciences, Springer, 2025
+</p>
+</li>
+<li class="lacort-card lacort-reveal">
+<h3>
+<a href="https://doi.org/10.1007/978-3-031-82334-3_115">Discrete event simulation for hospital inpatient flow modelling: A review of validation methods</a>
+</h3>
+<p class="lacort-small">
+Organizational engineering, coping with complexity, Springer, 2025
+</p>
+</li>
+</ul>
+<p><a href="es/research.html" class="lacort-button">Ver todas las publicaciones</a></p>
+</section>
+</div>
+<div class="lacort-band--amber lacort-section">
+<section id="colaboramos" class="lacort-reveal lacort-wide">
+<h2 class="lacort-reveal">¿Colaboramos?</h2>
+<p>Escríbeme a <a href="mailto:alberto.lacort@upv.es">alberto.lacort@upv.es</a>.</p>
+</section>
+</div>
 
-<p><a hreflang="es" lang="es" href="es/index.html">Español</a> · 
-<a hreflang="en" lang="en" href="en/index.html">English</a></p>
+<div class="lacort-wide"><p class="lacort-small">Última actualización: <time class="lacort-updated" datetime="2026-10-01">1 de octubre de 2026</time></p></div>
 </main>
 <footer class="lacort-footer"><div class="lacort-wide lacort-footer__grid">
 <div class="lacort-footer__col"><h2 class="lacort-footer__title" id="contacto">Contacto</h2>
@@ -74,7 +173,7 @@ Departamento de Organización de Empresas<br>
 <a href="https://rogle.webs.upv.es">ROGLE</a></p></div>
 </div></footer>
 <div class="lacort-footer__legal"><div class="lacort-wide">
-<p> · Web en construcción</p>
+<p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Contenido bajo licencia CC BY-NC-SA 4.0</a> · Web en construcción</p>
 </div></div>
 
 
