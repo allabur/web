@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title>Alberto Lacort · Blog</title>
+<link href="https://allabur.webs.upv.es/en/blog.html"/>
+<link rel="self" href="https://allabur.webs.upv.es/en/feed.xml"/>
+<id>https://allabur.webs.upv.es/en/</id>
+<updated>2026-10-02T00:00:00Z</updated>
+<author><name>Alberto Lacort</name></author>
+<entry><title>How I built this website</title><link href="https://allabur.webs.upv.es/en/post-building-this-site.html"/><id>https://allabur.webs.upv.es/en/post-building-this-site.html</id><updated>2026-10-02T00:00:00Z</updated><summary>A bilingual, accessible, cookie-free website made with Quarto, with the brand in code and published in seconds. What I chose and why.</summary></entry>
+</feed>

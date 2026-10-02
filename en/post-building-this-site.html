@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="A bilingual, accessible, cookie-free website made with Quarto, with the brand in code and published in seconds. What I chose and why.">
 
-<title>Alberto Lacort</title>
+<title>How I built this website</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -31,13 +32,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<link rel="alternate" hreflang="es" href="../es/index.html">
-<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="es" href="../es/post-building-this-site.html">
+<link rel="alternate" hreflang="en" href="post-building-this-site.html">
 <link rel="icon" type="image/svg+xml" href="../img/monogram-positive.svg">
 <meta name="color-scheme" content="light dark">
 
 <script src="../lacort-theme.js"></script>
 
+<link rel="alternate" type="application/atom+xml" title="Blog" href="feed.xml">
 
 
 <link rel="stylesheet" href="../lacort-web.css">
@@ -68,94 +70,37 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div class="lacort-header__tools">
 <button type="button" class="lacort-button lacort-button--outline lacort-square lacort-theme-toggle" hidden="" data-lacort-theme-toggle="" data-label-to-dark="Switch to dark theme" data-label-to-light="Switch to light theme" aria-label="Switch to dark theme"><svg class="lacort-theme-toggle__moon" viewbox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"></path></svg><svg class="lacort-theme-toggle__sun" viewbox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></button>
-<a class="lacort-button lacort-button--outline lacort-square" hreflang="es" lang="es" href="../es/index.html">ES</a>
+<a class="lacort-button lacort-button--outline lacort-square" hreflang="es" lang="es" href="../es/post-building-this-site.html">ES</a>
 </div>
 </header>
+<nav class="lacort-breadcrumb lacort-band" aria-label="Breadcrumb">
+<div class="lacort-wide lacort-breadcrumb__inner"><ol>
+<li><a href="index.html">Home</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li aria-current="page">How I built this website</li>
+</ol></div></nav>
+<main id="main-content"><div class="lacort-titleband lacort-band--dark"><div class="lacort-wide">
+<h1>How I built this website</h1>
 
-<main id="main-content"><div class="lacort-band--amber lacort-notice" role="note">
-<div class="lacort-wide">
-<p><strong>Website under construction.</strong> The contents, links and data on this site are provisional: they may change or be wrong while I build it.</p>
-</div>
-</div>
-<div class="lacort-hero lacort-band--dark">
-<div class="lacort-hero__inner">
-<div class="lacort-hero__text">
-<p class="lacort-hero__kicker">
-Operations research in health care
-</p>
-<h1 id="alberto-lacort">Alberto Lacort</h1>
-<div class="lacort-lead">
-<p>I research hospital bed management and patient flow simulation.</p>
-</div>
-<p>PhD student in Industrial Engineering at Polytechnique Montréal and the Universitat Politècnica de València. ROGLE group, Department of Business Organisation.</p>
-<p><a href="research.html" class="lacort-button lacort-button--outline">Research</a> <a href="cv.html" class="lacort-button lacort-button--outline">CV</a></p>
-</div>
-<p><img class="lacort-hero__photo" src="../img/alberto-lacort-640.jpg" srcset="../img/alberto-lacort-640.jpg 640w, ../img/alberto-lacort-1280.jpg 1280w" sizes="(min-width: 48rem) 40vw, 100vw" width="640" height="640" fetchpriority="high" alt="Portrait of Alberto Lacort smiling, wearing a suit with his arms crossed, in a garden"></p>
-</div>
-</div>
-<div class="lacort-section">
-<section id="research-lines" class="lacort-reveal lacort-wide">
-<h2 class="lacort-reveal">Research lines</h2>
-<ul class="lacort-grid">
-<li class="lacort-card lacort-reveal">
-<h3>
-<a href="research.html#category=Bed management">Hospital bed management</a>
-</h3>
-<p>
-Strategies to admit, discharge and reconfigure beds, and a conceptual framework to model them.
-</p>
-</li>
-<li class="lacort-card lacort-reveal">
-<h3>
-<a href="research.html#category=Discrete event simulation">Patient flow simulation</a>
-</h3>
-<p>
-Discrete event simulation of inpatient units and the validation of the models.
-</p>
-</li>
-<li class="lacort-card lacort-reveal">
-<h3>
-<a href="research.html#category=Surgical block">Surgical blocks</a>
-</h3>
-<p>
-Capacity management of surgical blocks and digital twins of a sterilisation centre.
-</p>
-</li>
-</ul>
-</section>
-</div>
-<div class="lacort-band lacort-section">
-<section id="recent-publications" class="lacort-reveal lacort-wide">
-<h2 class="lacort-reveal">Recent publications</h2>
-<ul class="lacort-grid">
-<li class="lacort-card lacort-reveal">
-<h3>
-<a href="https://doi.org/10.1007/978-3-031-78241-1_16">Hospital bed management modelling: A conceptual framework</a>
-</h3>
-<p class="lacort-small">
-Decision sciences, Springer, 2025
-</p>
-</li>
-<li class="lacort-card lacort-reveal">
-<h3>
-<a href="https://doi.org/10.1007/978-3-031-82334-3_115">Discrete event simulation for hospital inpatient flow modelling: A review of validation methods</a>
-</h3>
-<p class="lacort-small">
-Organizational engineering, coping with complexity, Springer, 2025
-</p>
-</li>
-</ul>
-<p><a href="research.html" class="lacort-button">See all publications</a></p>
-</section>
-</div>
-<div class="lacort-band--amber lacort-section">
-<section id="shall-we-collaborate" class="lacort-reveal lacort-wide">
-<h2 class="lacort-reveal">Shall we collaborate?</h2>
-<p>Write to me at <a href="mailto:alberto.lacort@upv.es">alberto.lacort@upv.es</a>.</p>
-</section>
-</div>
+</div></div>
+<div class="lacort-section"><div class="lacort-wide"><div class="lacort-page">
+<p class="lacort-small"><time datetime="2026-10-02">2 October 2026</time></p>
+<ul class="lacort-tags"><li>Web</li><li>Quarto</li><li>Brand</li></ul>
+<p>This website started from a simple need: a site of my own, clear and almost self-maintaining. These are the decisions I made.</p>
+<h2 id="the-stack">The stack</h2>
+<p><a href="https://quarto.org">Quarto</a> builds static pages from text. A Pandoc filter, written in Lua, adds the header, the menu, the footer and the date to every page, so pages hold only their content. There is no database, no cookies and no third-party scripts.</p>
+<h2 id="the-brand-is-in-the-code">The brand is in the code</h2>
+<p>Colours, fonts and sizes come from a written specification and a single stylesheet. More than six hundred automated checks compute the contrasts (WCAG AA), the order of the menu, or that every page has a single title. If something breaks, it is not merged.</p>
+<h2 id="two-languages-and-two-themes">Two languages and two themes</h2>
+<p>Every page exists in Spanish and in English. The light or dark theme follows the system, and a button with a sun and a moon lets me change it.</p>
+<h2 id="publications">Publications</h2>
+<p>I took the structure of <a href="https://www.andrewheiss.com/research/">Andrew Heiss’s research page</a> as a model: a side index, categories that filter the list, and an action strip under each entry. References come from a BibTeX file exported from Zotero. Each publication has its own page, its BibTeX, a RIS file and COinS metadata so that Zotero can import it.</p>
+<h2 id="how-it-is-published">How it is published</h2>
+<p>I build on my computer and push the result to a public GitHub repository. A webhook makes the UPV server download it within seconds. I do not use remote actions: everything is checked first, locally.</p>
+<h2 id="what-is-missing">What is missing</h2>
+<p>The real links of the publications, the teaching materials and the data of my studies are still missing. This is the first note; I will add more.</p>
 
-<div class="lacort-wide"><p class="lacort-small">Last updated: <time class="lacort-updated" datetime="2026-10-01">1 October 2026</time></p></div>
+<p class="lacort-small">Last updated: <time class="lacort-updated" datetime="2026-10-02">2 October 2026</time></p></div></div></div>
 </main>
 <footer class="lacort-footer"><div class="lacort-wide lacort-footer__grid">
 <div class="lacort-footer__col"><h2 class="lacort-footer__title" id="contacto">Contact</h2>

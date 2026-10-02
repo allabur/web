@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Una web bilingüe, accesible y sin cookies, hecha con Quarto, con la marca en código y publicada en segundos. Qué elegí y por qué.">
 
-<title>Enlace ficticio</title>
+<title>Cómo he construido esta web</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -31,13 +32,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<link rel="alternate" hreflang="es" href="placeholder.html">
-<link rel="alternate" hreflang="en" href="../en/placeholder.html">
+<link rel="alternate" hreflang="es" href="post-building-this-site.html">
+<link rel="alternate" hreflang="en" href="../en/post-building-this-site.html">
 <link rel="icon" type="image/svg+xml" href="../img/monogram-positive.svg">
 <meta name="color-scheme" content="light dark">
-<meta name="robots" content="noindex">
+
 <script src="../lacort-theme.js"></script>
 
+<link rel="alternate" type="application/atom+xml" title="Blog" href="feed.xml">
 
 
 <link rel="stylesheet" href="../lacort-web.css">
@@ -68,23 +70,37 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div class="lacort-header__tools">
 <button type="button" class="lacort-button lacort-button--outline lacort-square lacort-theme-toggle" hidden="" data-lacort-theme-toggle="" data-label-to-dark="Cambiar a tema oscuro" data-label-to-light="Cambiar a tema claro" aria-label="Cambiar a tema oscuro"><svg class="lacort-theme-toggle__moon" viewbox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"></path></svg><svg class="lacort-theme-toggle__sun" viewbox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></button>
-<a class="lacort-button lacort-button--outline lacort-square" hreflang="en" lang="en" href="../en/placeholder.html">EN</a>
+<a class="lacort-button lacort-button--outline lacort-square" hreflang="en" lang="en" href="../en/post-building-this-site.html">EN</a>
 </div>
 </header>
 <nav class="lacort-breadcrumb lacort-band" aria-label="Migas de pan">
 <div class="lacort-wide lacort-breadcrumb__inner"><ol>
 <li><a href="index.html">Inicio</a></li>
-<li aria-current="page">Enlace ficticio</li>
+<li><a href="blog.html">Blog</a></li>
+<li aria-current="page">Cómo he construido esta web</li>
 </ol></div></nav>
 <main id="main-content"><div class="lacort-titleband lacort-band--dark"><div class="lacort-wide">
-<h1>Enlace ficticio</h1>
+<h1>Cómo he construido esta web</h1>
 
 </div></div>
 <div class="lacort-section"><div class="lacort-wide"><div class="lacort-page">
-<p>Este enlace es de ejemplo. La web está en construcción y todavía no hay un documento, un código ni unos datos reales detrás de este botón. Sirve para ver cómo quedarán las acciones de cada publicación.</p>
-<p><a href="research.html">Volver a Investigación</a></p>
+<p class="lacort-small"><time datetime="2026-10-02">2 de octubre de 2026</time></p>
+<ul class="lacort-tags"><li>Web</li><li>Quarto</li><li>Marca</li></ul>
+<p>Esta web nació de una necesidad sencilla: tener un sitio propio, claro y que se mantenga casi solo. Estas son las decisiones que tomé.</p>
+<h2 id="la-pila">La pila</h2>
+<p><a href="https://quarto.org">Quarto</a> genera páginas estáticas a partir de texto. Un filtro de Pandoc, escrito en Lua, pone la cabecera, el menú, el pie y la fecha de cada página, así que las páginas solo llevan su contenido. No hay base de datos, ni cookies, ni scripts de terceros.</p>
+<h2 id="la-marca-está-en-el-código">La marca está en el código</h2>
+<p>Los colores, las fuentes y los tamaños salen de una especificación escrita y de una única hoja de estilos. Más de seiscientas comprobaciones automáticas calculan los contrastes (WCAG AA), el orden del menú o que cada página tenga un solo título. Si algo se rompe, no se fusiona.</p>
+<h2 id="dos-idiomas-y-dos-temas">Dos idiomas y dos temas</h2>
+<p>Cada página existe en castellano y en inglés. El tema claro u oscuro sigue el del sistema, y un botón con un sol y una luna permite cambiarlo.</p>
+<h2 id="las-publicaciones">Las publicaciones</h2>
+<p>Tomé como modelo la estructura de la <a href="https://www.andrewheiss.com/research/">página de investigación de Andrew Heiss</a>: índice lateral, categorías que filtran la lista y una tira de acciones bajo cada entrada. Las referencias salen de un archivo BibTeX exportado de Zotero. Cada publicación tiene su ficha, su BibTeX, un archivo RIS y metadatos COinS para que Zotero la importe.</p>
+<h2 id="cómo-se-publica">Cómo se publica</h2>
+<p>Compilo en mi ordenador y empujo el resultado a un repositorio público de GitHub. Un aviso (<em>webhook</em>) hace que el servidor de la UPV lo descargue en segundos. No uso acciones remotas: todo se comprueba antes, en local.</p>
+<h2 id="lo-que-falta">Lo que falta</h2>
+<p>Faltan los enlaces reales de las publicaciones, los materiales de docencia y los datos de mis estudios. Esta es la primera nota; iré añadiendo otras.</p>
 
-<p class="lacort-small">Última actualización: <time class="lacort-updated" datetime="2026-10-01">1 de octubre de 2026</time></p></div></div></div>
+<p class="lacort-small">Última actualización: <time class="lacort-updated" datetime="2026-10-02">2 de octubre de 2026</time></p></div></div></div>
 </main>
 <footer class="lacort-footer"><div class="lacort-wide lacort-footer__grid">
 <div class="lacort-footer__col"><h2 class="lacort-footer__title" id="contacto">Contacto</h2>
