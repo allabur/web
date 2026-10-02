@@ -437,8 +437,17 @@ textarea {
   transform: translateY(-0.25rem);
 }
 
-.lacort-card h3 {
+.lacort-card h3,
+.lacort-card h4 {
   font-size: var(--ui-size-lead);
+}
+
+.lacort-stat__value {
+  margin: 0;
+  font-family: var(--ui-font-title);
+  font-size: var(--ui-size-h2);
+  font-weight: 700;
+  line-height: var(--ui-leading-title);
 }
 
 .lacort-card > :first-child {
