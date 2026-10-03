@@ -54,6 +54,7 @@
   --lacort-amber-15: #FEF3D9;
   --lacort-white: #FFFFFF;
   --lacort-gray-light: #F1F1F1;
+  --lacort-surface: #F3F4FA;
   --lacort-gray-mid: #CFCFCF;
   --lacort-text-secondary: #5B6770;
   --lacort-text: #3F4444;
@@ -86,7 +87,7 @@
 
 body {
   background-color: var(--lacort-white);
-  color: var(--lacort-text);
+  color: var(--lacort-oxford-blue);
   font-family: var(--ui-font-text);
   font-size: var(--ui-size-text);
   line-height: var(--ui-leading-text);
@@ -144,38 +145,38 @@ pre {
 /* Long lines scroll inside the block, not the page (WCAG 1.4.10). */
 pre {
   overflow-x: auto;
-  background-color: var(--lacort-gray-light);
-  color: var(--lacort-text);
+  background-color: var(--lacort-surface);
+  color: var(--lacort-oxford-blue);
 }
 
 /* Links (spec 2.4): always underlined ---------------------------------------- */
 
 :where(a:any-link) {
-  color: var(--lacort-oxford-blue);
+  color: var(--lacort-indigo);
   text-decoration: underline;
 }
 
 :where(a:visited) {
-  color: var(--lacort-oxford-blue);
+  color: var(--lacort-indigo);
 }
 
 /* After :visited, so a hovered visited link changes colour too. */
 :where(a:any-link:hover) {
-  color: var(--lacort-oxford-blue-mid);
+  color: var(--lacort-oxford-blue);
 }
 
 /* Focus (spec 2.4) ----------------------------------------------------------- */
 
 :focus-visible {
-  outline: 2px dashed var(--lacort-oxford-blue);
+  outline: 2px dashed var(--lacort-indigo);
   outline-offset: 2px;
 }
 
 /* Bands and footer (spec 2.4) ------------------------------------------------ */
 
 .lacort-band {
-  background-color: var(--lacort-gray-light);
-  color: var(--lacort-text);
+  background-color: var(--lacort-surface);
+  color: var(--lacort-oxford-blue);
 }
 
 .lacort-band--indigo {
@@ -183,14 +184,16 @@ pre {
   color: var(--lacort-oxford-blue);
 }
 
-/* Oxford Blue medio gives 3.95:1 on Indigo light. */
+/* Indigo gives 3.2:1 on Indigo light: links keep Oxford Blue there. */
+.lacort-band--indigo :where(a:any-link),
+.lacort-band--indigo :where(a:visited),
 .lacort-band--indigo :where(a:any-link:hover) {
   color: var(--lacort-oxford-blue);
 }
 
 .lacort-band--amber {
   background-color: var(--lacort-amber-15);
-  color: var(--lacort-text);
+  color: var(--lacort-oxford-blue);
 }
 
 .lacort-footer,
@@ -241,9 +244,9 @@ pre {
   justify-content: center;
   min-height: 2.75rem;
   padding-inline: 1.5rem;
-  border: 2px solid var(--lacort-oxford-blue-mid);
+  border: 2px solid var(--lacort-indigo);
   border-radius: 0;
-  background-color: var(--lacort-oxford-blue-mid);
+  background-color: var(--lacort-indigo);
   color: var(--lacort-white);
   font-family: var(--ui-font-text);
   font-size: var(--ui-size-menu);
@@ -261,26 +264,26 @@ pre {
 }
 
 .lacort-button--outline {
-  border-color: var(--lacort-oxford-blue-mid);
+  border-color: var(--lacort-indigo);
   background-color: var(--lacort-white);
-  color: var(--lacort-oxford-blue-mid);
+  color: var(--lacort-indigo);
 }
 
 .lacort-button--outline:hover {
-  border-color: var(--lacort-oxford-blue-mid);
-  background-color: var(--lacort-oxford-blue-mid);
+  border-color: var(--lacort-indigo);
+  background-color: var(--lacort-indigo);
   color: var(--lacort-white);
 }
 
 .lacort-button--resource {
-  border-color: var(--lacort-text);
-  background-color: var(--lacort-text);
+  border-color: var(--lacort-oxford-blue);
+  background-color: var(--lacort-oxford-blue);
   color: var(--lacort-white);
 }
 
 .lacort-button--resource:hover {
-  border-color: var(--lacort-oxford-blue);
-  background-color: var(--lacort-oxford-blue);
+  border-color: var(--lacort-indigo);
+  background-color: var(--lacort-indigo);
   color: var(--lacort-white);
 }
 
@@ -304,7 +307,7 @@ textarea {
   border: 1px solid var(--lacort-text-secondary);
   border-radius: 0;
   background-color: var(--lacort-white);
-  color: var(--lacort-text);
+  color: var(--lacort-oxford-blue);
   font-family: var(--ui-font-text);
   font-size: var(--ui-size-text);
   line-height: var(--ui-leading-text);
@@ -424,7 +427,7 @@ textarea {
   padding: 1rem;
   border: 2px solid var(--lacort-oxford-blue);
   background-color: var(--lacort-white);
-  color: var(--lacort-text);
+  color: var(--lacort-oxford-blue);
   box-shadow: var(--lacort-shadow);
   transition:
     border-color 0.2s,
@@ -542,8 +545,8 @@ textarea {
 }
 
 .lacort-footer__legal {
-  background-color: var(--lacort-gray-light);
-  color: var(--lacort-text);
+  background-color: var(--lacort-surface);
+  color: var(--lacort-oxford-blue);
 }
 
 .lacort-footer__legal > .lacort-wide {
@@ -726,8 +729,8 @@ textarea {
   flex-wrap: wrap;
   align-items: stretch;
   margin: 0.75rem 0 0;
-  background-color: var(--lacort-gray-light);
-  color: var(--lacort-text);
+  background-color: var(--lacort-surface);
+  color: var(--lacort-oxford-blue);
 }
 
 .lacort-pub__primary {
@@ -735,7 +738,7 @@ textarea {
   align-items: center;
   min-height: 2.75rem;
   padding: 0 1.5rem 0 1rem;
-  background-color: var(--lacort-oxford-blue-mid);
+  background-color: var(--lacort-indigo);
   color: var(--lacort-white);
 }
 
@@ -747,7 +750,7 @@ textarea {
   padding: 0 0.75rem;
   border: 0;
   background: transparent;
-  color: var(--lacort-oxford-blue);
+  color: var(--lacort-indigo);
   font-family: var(--ui-font-text);
   font-size: var(--ui-size-text);
   text-decoration: underline;
@@ -755,7 +758,7 @@ textarea {
 }
 
 .lacort-pub__link:hover {
-  color: var(--lacort-oxford-blue-mid);
+  color: var(--lacort-oxford-blue);
 }
 
 .lacort-icon {
