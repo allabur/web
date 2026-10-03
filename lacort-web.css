@@ -555,12 +555,13 @@ textarea {
 }
 
 .lacort-notice {
-  background-color: var(--lacort-amber-15);
-  color: var(--lacort-text);
+  background-color: var(--lacort-oxford-blue);
+  color: var(--lacort-white);
+  font-size: var(--ui-size-menu);
 }
 
 .lacort-notice > .lacort-wide {
-  padding-block: 0.75rem;
+  padding-block: 0.625rem;
 }
 
 .lacort-notice p {
@@ -1017,11 +1018,6 @@ textarea {
 :root[data-theme="dark"] .lacort-footer__legal :where(a:visited),
 :root[data-theme="dark"] .lacort-footer__legal :where(a:any-link:hover) {
   color: var(--lacort-white);
-}
-
-:root[data-theme="dark"] .lacort-notice {
-  background-color: var(--lacort-amber);
-  color: var(--lacort-oxford-blue);
 }
 
 :root[data-theme="dark"] .lacort-footer {
